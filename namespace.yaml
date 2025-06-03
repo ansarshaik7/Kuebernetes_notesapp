@@ -1,0 +1,4 @@
+﻿kind: Namespace
+apiVersion: v1
+Metadata:
+  name: notes-app-ns

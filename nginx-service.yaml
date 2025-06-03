@@ -1,0 +1,11 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  Namespace: notes-app-ns
+spec:
+  selector:
+    app: notes-app-ns
+  ports:
+  - port: 80
+    targetPort: 80

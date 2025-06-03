@@ -1,0 +1,11 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: notes-app-service
+  Namespace: notes-app-ns
+spec:
+  selector:
+    app: notes-app-ns
+  ports:
+  - port: 8000
+    targetPort: 8000
