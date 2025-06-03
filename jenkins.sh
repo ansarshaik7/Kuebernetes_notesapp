@@ -6,15 +6,16 @@ set -e
 echo "🔧 Updating system packages..."
 sudo yum update -y
 
-echo "📦 Installing Java (Amazon Corretto 11)..."
-sudo yum install java-11-amazon-corretto -y
-
 echo "📦 Adding Jenkins repo..."
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
 echo "📦 Installing Jenkins..."
 sudo yum install jenkins -y
+
+sudo mkdir -p /var/lib/jenkins
+sudo mkdir -p /var/log/jenkins
+sudo mkdir -p /var/cache/jenkins
 
 echo "🔐 Setting permissions for Jenkins..."
 sudo chown -R jenkins:jenkins /var/lib/jenkins

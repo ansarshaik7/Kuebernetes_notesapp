@@ -38,6 +38,6 @@ echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
 # Apply the changes
 source ~/.bashrc
 
-exho $JAVA_HOME
+echo $JAVA_HOME
 
 java --version

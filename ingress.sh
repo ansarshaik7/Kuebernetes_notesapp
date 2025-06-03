@@ -14,14 +14,15 @@ else
         exit 1
     fi
 fi
-
+# copy ingress file
+cp ingress.yaml /root/ingress
 cd ingress
 
 # intall the nginx ingress controller
 kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml
 
-# copy ingress file
-cp ingress.yaml /root/ingress
+# # copy ingress file
+# cp ingress.yaml /root/ingress
 
 kubectl get pods -n ingress-nginx
 kubectl get svc -n ingress-nginx

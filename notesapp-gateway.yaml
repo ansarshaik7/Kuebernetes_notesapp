@@ -1,0 +1,15 @@
+﻿apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: notesapp-gateway
+  namespace: notes-app-ns
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
