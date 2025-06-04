@@ -1,13 +1,13 @@
 # !/bin/bash
 
 # check istio folder
-folder = "istio"
+#folder = "istio"
 
-if [ -d "$folder" ]; then
-    echo " $folder folder is already present....!"
+if [ -d "istio" ]; then
+    echo " istio folder is already present....!"
 else
-    echo " $folder folder is not present. Downloading...!"
-    mkdir -p $folder
+    echo " istio folder is not present. Downloading...!"
+    mkdir istio
     
     if [ $? -eq 0 ]; then
         echo " Istio folder created sucessfully.."
@@ -21,7 +21,7 @@ fi
 if ls istio-1.2* 1> /dev/null 2>&1; then
     echo "Istio is already downloaded....!"
 else
-    echo " $istio folder is not present. Downloading...!"
+    echo " istio folder is not present. Downloading...!"
     curl -L https://istio.io/downloadIstio | sh -
     
     if [ $? -eq 0 ]; then
