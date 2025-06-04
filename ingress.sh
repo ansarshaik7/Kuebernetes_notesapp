@@ -1,11 +1,11 @@
 ﻿#!/bin/bash
 
 # Create ingress folder if it doesn't exist
-if [ -d "ingress" ]; then
+if [ -d ""$WORKSPACE/ingress"" ]; then
     echo "The ingress folder is present"
 else
     echo "The ingress folder is not present... creating the folder"
-    mkdir -p ingress
+    mkdir -p "$WORKSPACE/ingress"
     if [ $? -eq 0 ]; then
         echo "The ingress folder was created successfully"
     else
@@ -15,8 +15,8 @@ else
 fi
 
 # Copy ingress.yaml
-cp ingress.yaml ingress
-cd ingress
+cp ingress.yaml "$WORKSPACE/ingress"
+cd "$WORKSPACE/ingress"
 
 # Install nginx ingress controller
 kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml
