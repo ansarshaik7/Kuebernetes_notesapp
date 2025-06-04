@@ -3,7 +3,7 @@
 # check istio folder
 folder = "istio"
 
-if [ d "$folder" ]; then
+if [ -d "$folder" ]; then
     echo " $folder folder is already present....!"
 else
     echo " $folder folder is not present. Downloading...!"
