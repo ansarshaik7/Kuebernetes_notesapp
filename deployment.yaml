@@ -4,6 +4,7 @@ metadata:
   name: notes-app-deployment
   Namespace: notes-app-ns
 spec:
+  replica: 2
   selector:
     matchLabels:
       app: notes-app-ns
@@ -12,9 +13,11 @@ spec:
       labels:
         app: notes-app-ns
     spec:
+      imagePullSecrets:
+        - name: notescred
       containers:
       - name: notes-app
-        image: shaikansar:latest
+        image: shaikansar/kube_practice:latest
         resources:
           requests:
             memory: "64Mi"
