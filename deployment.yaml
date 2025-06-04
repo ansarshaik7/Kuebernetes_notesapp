@@ -29,8 +29,8 @@ spec:
         - containerPort: 8000
         volumeMounts:
           - mountPath: "/mnt/data"
-            name: notes-app-pvc
+            name: notes-app-volume
       volumes:
-        - name: motes-app
+        - name: notes-app-volume
           persistentVolumeClaim:
             claimName: notes-app-pvc
