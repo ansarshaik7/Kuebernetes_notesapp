@@ -2,7 +2,7 @@
 kind: Deployment
 metadata:
   name: nginx-deployment
-  Namespace: notes-app-ns
+  namespace: notes-app-ns
 spec:
   replicas: 2
   selector:
