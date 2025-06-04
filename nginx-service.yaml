@@ -2,7 +2,7 @@
 kind: Service
 metadata:
   name: nginx-service
-  Namespace: notes-app-ns
+  namespace: notes-app-ns
 spec:
   selector:
     app: notes-app-ns

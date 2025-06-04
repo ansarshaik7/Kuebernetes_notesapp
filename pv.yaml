@@ -2,7 +2,7 @@
 kind: PersistentVolume
 metadata:
   name: notes-app-pv
-#  Namespace: notes-app-ns
+  namespace: notes-app-ns
 spec:
   capacity:
     storage: 2Gi

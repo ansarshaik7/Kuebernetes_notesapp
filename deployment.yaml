@@ -2,7 +2,7 @@
 kind: Deployment
 metadata:
   name: notes-app-deployment
-  Namespace: notes-app-ns
+  namespace: notes-app-ns
 spec:
   replica: 2
   selector:
